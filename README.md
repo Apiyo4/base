@@ -6,7 +6,7 @@ Have you ever travelled to a place and you find out that the locals don't speak 
 ## Team Members and Roles
 
 * Annette Odingo (Role 1, Role 2)
-* Sam Hudson (Role 3, Role 4)
+* Member 2 (Role 3, Role 4)
 
 ## Prerequisites
 
