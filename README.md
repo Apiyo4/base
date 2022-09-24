@@ -5,7 +5,7 @@ Have you ever travelled to a place and you find out that the locals don't speak 
 
 ## Team Members and Roles
 
-* Annette Odingo (Role 1, Role 2)
+* Annette Odingo (System Analyst, Software Developer)
 * Member 2 (Role 3, Role 4)
 
 ## Prerequisites
