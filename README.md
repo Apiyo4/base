@@ -6,7 +6,7 @@ Have you ever travelled to a place and you find out that the locals don't speak 
 ## Team Members and Roles
 
 * Annette Odingo (System Analyst, Software Developer)
-* Member 2 (Role 3, Role 4)
+* Samuel Hudson Manwa Maangi (Software Engineer, GUI)
 
 ## Prerequisites
 
