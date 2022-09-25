@@ -5,15 +5,20 @@ Team members: Annette Odingo, Samuel Hudson Manwa Maangi
 # Introduction
 
 According to the United Nations World Tourism Organization(UNWTO), the onset of the COVID-19 pandemic led to a decline in international tourism by about 74%. This on the other hand had the ripple effect of pushing about 120 million people who relied on tourism into poverty. However, with the reduction in transmissions of the virus in the second quarter of the year as well as an increase in uptake of COVID-19 vaccines, the tourism sector is gradually recovering from the effects of the pandemic. Lockdowns have been lifted in many states and travelers have the ability to move either for leisure, businesses or educational purposes.
+
 It often occurs that during travelling, a traveler may visit a country that speak a different language from which they understand and thus necessitates for a travel lingo platform, in which anyone can learn the basics of a language in a simplified manner. Travel Lingo is a web based software application that will enable users to get stated with the basics of a language in order to interact and effectively communicate with the locals of the region they intend to visit. The system will also have a language word game for younger demography who would learn a language better with an interactive game rather than the latter.
 
 
 # Anticipated Technologies
 
-- ## Software development tools: Backend Scripting: 
-- ## Frontend scripting and Design: 
-- ## Software editors and IDEs: 
-- ## Designing and Modelling of the Proposed system: Visual Paradigm and Lucid Charts
+- ### Software development tools: Backend Scripting: 
+
+- ### Frontend scripting and Design:
+
+- ### Software editors and IDEs:
+
+- ### Designing and Modelling of the Proposed system:
+Visual Paradigm and Lucid Charts
 
 
 # Method/Approach
@@ -22,14 +27,24 @@ The development methodology to be used for this project will be the waterfall mo
 
 # Estimated Timeline
 
-(Figure out what your major milestones for this project will be, including how long you anticipate it *may* take to reach that point)
+ACTIVITIES                    
+- PLANNING -            Week 1 and Week 2					
+- ANALYSIS -		Week 2 and Week 3			
+- DESIGN - 			Week 4			
+- IMPLEMENTATION - 	Week 5 and 6				
+- TESTING - 		Weeek 7			
+- DOCUMENTATION - 	Week 1-7				
+
 
 # Anticipated Problems
 
 Working with a project of such magnitude will always bring challenges that must be tackled. Some of the problems that may arise include:
-- ## Time constraints – 8 weeks is a short time to complete a project to its entirety, but as project managers we shall work with the time available to produce a deliverable. We may have to cut down on some features and provide those in a second version of the software
-- ## Decision making – Working with a group of brilliant software personnel always brings a problem in terms of decision making. With everyone so good and a breast with the latest technologies in modern computer systems, it may be difficult on settling the most suitable methods of approaching a task as everyone believes their solution is the best. We intend to deal with this with effective communication skills amongst ourselves and having everyone understand their roles
-- ## Technological familiarity – Some of the technologies we shall use to implement the system may not be familiar across the board of all developers, and thus we may need to set up sometime for training.
+- ### Time constraints
+8 weeks is a short time to complete a project to its entirety, but as project managers we shall work with the time available to produce a deliverable. We may have to cut down on some features and provide those in a second version of the software
+- ### Decision making 
+Working with a group of brilliant software personnel always brings a problem in terms of decision making. With everyone so good and a breast with the latest technologies in modern computer systems, it may be difficult on settling the most suitable methods of approaching a task as everyone believes their solution is the best. We intend to deal with this with effective communication skills amongst ourselves and having everyone understand their roles
+- ### Technological familiarity
+Some of the technologies we shall use to implement the system may not be familiar across the board of all developers, and thus we may need to set up sometime for training.
 
 # References
 
