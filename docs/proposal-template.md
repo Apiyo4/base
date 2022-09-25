@@ -23,9 +23,9 @@ The development methodology to be used for this project will be the waterfall mo
 # Anticipated Problems
 
 Working with a project of such magnitude will always bring challenges that must be tackled. Some of the problems that may arise include:
-•	Time constraints – 8 weeks is a short time to complete a project to its entirety, but as project managers we shall work with the time available to produce a deliverable. We may have to cut down on some features and provide those in a second version of the software
-•	Decision making – Working with a group of brilliant software personnel always brings a problem in terms of decision making. With everyone so good and a breast with the latest technologies in modern computer systems, it may be difficult on settling the most suitable methods of approaching a task as everyone believes their solution is the best. We intend to deal with this with effective communication skills amongst ourselves and having everyone understand their roles
-•	Technological familiarity – Some of the technologies we shall use to implement the system may not be familiar across the board of all developers, and thus we may need to set up sometime for training.
+- Time constraints – 8 weeks is a short time to complete a project to its entirety, but as project managers we shall work with the time available to produce a deliverable. We may have to cut down on some features and provide those in a second version of the software
+- Decision making – Working with a group of brilliant software personnel always brings a problem in terms of decision making. With everyone so good and a breast with the latest technologies in modern computer systems, it may be difficult on settling the most suitable methods of approaching a task as everyone believes their solution is the best. We intend to deal with this with effective communication skills amongst ourselves and having everyone understand their roles
+- Technological familiarity – Some of the technologies we shall use to implement the system may not be familiar across the board of all developers, and thus we may need to set up sometime for training.
 
 # References
 
