@@ -1,6 +1,6 @@
-Team name: Kilimanjaro
+# Team name: Kilimanjaro
 
-Team members: Annette Odingo, Samuel Hudson Manwa Maangi
+### Team members: Annette Odingo, Samuel Hudson Manwa Maangi
 
 # Introduction
 
