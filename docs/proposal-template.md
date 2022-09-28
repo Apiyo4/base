@@ -25,7 +25,7 @@ It often occurs that during travelling, a traveler may visit a country that spea
 - ### Software editors and IDEs:
       - visual studio code
 - ### Designing and Modelling of the Proposed system:
-Visual Paradigm and Lucid Charts
+      - Visual Paradigm and Lucid Charts
 
 
 # Method/Approach
