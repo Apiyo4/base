@@ -6,5 +6,6 @@
 ### Project Proposal 
 [Project Proposal](./proposal-template.md)
 ### Team Minutes
-- [Week1](../meetings/GVSU-CIS641-Kilimajaro-2022-10-02)
-- 
+- [Week1](../meetings/GVSU-CIS641-Kilimajaro-2022-10-02.md)
+- [Week2](../meetings/GVSU-CIS641-Kilimajaro-2022-10-10.md)
+### Team Docs
