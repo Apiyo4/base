@@ -9,3 +9,4 @@
 - [Week1](../meetings/GVSU-CIS641-Kilimajaro-2022-10-02.md)
 - [Week2](../meetings/GVSU-CIS641-Kilimajaro-2022-10-10.md)
 ### Team Docs
+[Software Requirements Specification](./software_requirements_specifications.md)
