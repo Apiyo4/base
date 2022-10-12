@@ -1,7 +1,7 @@
 <p align='center'>
 <img src="../artifacts/images/welcome.png">
 </p> 
-
+[welcome](../artifacts/images/welcome.png)
 ## TRAVEL LINGO
 ### Project Proposal 
 [Project Proposal](./proposal-template.md)
