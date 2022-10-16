@@ -31,5 +31,5 @@ This document is the software-requirements specification document and it outline
     1. The system shall be available for usage for people of all cultures and in all jurisdictions across the world.
 4.  Operational Requirements
     1. The system shall be compatible with Chrome, Firefox, Opera and Microsoft Edge browsers.
-    2. The Web application shall be ubiquitous and available to the users at all times regardless of their geographical locations.   
+    2. The Web application shall be ubiquitous and available to the users at all times regardless of their geographical locations.
     
