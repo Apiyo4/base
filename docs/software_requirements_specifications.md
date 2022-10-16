@@ -1,16 +1,16 @@
 # Overview
 
-This document is the software-requirements specification document 
+This document is the software-requirements specification document and it outlines the tasks that the system must do, as well as characteristics the system shall possess. The requirements are broken down into two categories: Functional and Non-functional requirements. The functional requirements specify the processes to perform while the Non-functional requirements outline the behavioral properties the system must have. Listing the requirements enables us define the scope of the system, thus preventing scope creep or inadequate features in the final deliverable.
 
 # Functional Requirements
 
-1.  Create Administrator
+1.  Administrator Login
     1. The system shall allow for the creation of an administrator when the sign up button is pressed.
     2. The application shall validate and verify the administrator’s username and password before allowing access to the system.
     3. The system shall display the admin page that gives administrative privileges once, the Login button is clicked.
-2.  Facilitate game
+2.  Game Module
     1. Once clicked, the play game icon on the menu bar shall allow users to go to the play game page. 
-    2. The Web application shall prompt user to input a correct solution based on the problem the game posts.
+    2. The Web application shall prompt user to input a correct solution based on the challenge the game posts.
 3.  Manage tests
     1. The software shall allow users as well as administrators to undertake a test in the event the user wants to test their language proficiency.
     2. The system shall diminish the difficulty level of a test in the event the user doesn’t meet the 50%-mark threshold.
