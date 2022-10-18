@@ -10,11 +10,11 @@ Time: 7:30pm
 
 ### Discussion points:
 
-- Discuss use cases related in Travellingo
-- Allocate each use case to individuals
-- Discuss and generated respective Activity diagrams for each use case
+- Prepared for Midterm presentations points
+- Review on the class diagrams and models for travel lingo
+- Unify the requirements made by Sam and Annette
 
 ### Goals for next week (include responsibilities)
-- Research class models
-- Coming up with the various classes and models for our application
-- Fine tune and increase requirements
+- Work on the physical design and GUI designs (Sam)
+- Work on the setting up backend (Annette)
+- Look on the Entity Relationships we might require the system (unified)
