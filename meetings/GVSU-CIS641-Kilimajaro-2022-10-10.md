@@ -18,4 +18,4 @@ Time: 9:28pm
 
 ### Goals for next week (include responsibilities)
 
-* Prepare for class presentation
+* Prepare for class presentation (Annette and Sam)
