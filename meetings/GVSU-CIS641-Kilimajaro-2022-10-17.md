@@ -1,4 +1,4 @@
-CIS641 Meeting
+# CIS641 Meeting instructions 
 ## Meeting minutes
 ## Team name: Kilimanjaro
 
