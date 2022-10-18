@@ -18,6 +18,6 @@ Time: 8:26pm
 
 ### Goals for next week (include responsibilities)
 
-* Research class models
-* Coming up with the various classes and models for our application
-* Fine tune and increase requirements
+* Research class models (Annette and Sam)
+* Coming up with the various classes and models for our application (Annette)
+* Fine tune and increase requirements (Sam)
