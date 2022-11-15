@@ -4,19 +4,20 @@
 
 Members present: Samuel Hudson Maangi and Annette Odingo
 
-Date: 8th November 2022
+Date: 15th November 2022
 
-Time: 9:14pm
+Time: 4:14pm
 
 ### Discussion points:
 
-- Formulation of the Quiz modules structure
-- Set up content into different categories based on learners level
-- Content Modification and intergration with the database
-- Refine the gaming constitution that enable level progression
+- Development of the Guru set test framework to gauge the users understanding of the language
+- Set up of administrator knowledge examination module content
+- Availing the user inquiries to the Language Guru
+- Implementation of the language Guru sign up and Login pages
 
 ### Goals for next week (include responsibilities)
 
-- Research on the various ways to optimize user experience in a language learning software (Annette and Samuel)
-- Embark on administrator functionalities (Annette)
-- Examination modules for test of administrator knowledge (Samuel)
+- Debugging software code (Samuel)
+- Undertake Unit, Functional and Performance software testing (Annette, Samuel, Friends)
+- Bringing together our documentation to align with the software (Annette)
+- Find out some of niches in language learning to refine the software for the best user experience  (Annette and Samuel)
