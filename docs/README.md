@@ -12,7 +12,7 @@ Travel Lingo is a web based application that provides the platform by which anyo
 - [Week4](https://github.com/Apiyo4/base/blob/master/meetings/GVSU-CIS641-Kilimajaro-2022-10-21.md)
 - [Week5](https://github.com/Apiyo4/base/blob/master/meetings/GVSU-CIS641-Kilimajaro-2022-11-1.md)
 - [Week6](https://github.com/Apiyo4/base/blob/master/meetings/GVSU-CIS641-Kilimajaro-2022-11-8.md)
-- [Week7](https://github.com/Apiyo4/base/blob/master/meetings/GVSU-CIS641-Kilimajaro-2022-11-15.md
+- [Week7](https://github.com/Apiyo4/base/blob/master/meetings/GVSU-CIS641-Kilimajaro-2022-11-15.md)
 
 ### Team Docs
 [Software Requirements Specification](https://github.com/Apiyo4/base/blob/master/docs/software_requirements_specifications.md)
