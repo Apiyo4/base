@@ -10,7 +10,7 @@ Time: 9:17am
 
 ### Discussion points:
 
-- Review of the outcome of the various Unit, Functional and Performance software testing undertaken
+- Review of the outcome of the various Unit, Functional and Performance testing undertaken
 - Bringing together our documentation to align with the software
 - Combining some of the niches in language learning to refine the software for the best user experience
 - Error identification and analysis in debugging our software code
@@ -19,4 +19,4 @@ Time: 9:17am
 
 - Look into change management mechanisms for the software (Samuel)
 - Perform more tests to identify loose nuts in the sytem (Annette, Samuel, Friends)
-- Final deliveranble documentation with 50 requirements should be done
+- Final deliverable documentation with 50 requirements should be done (Samuel & Annette)
