@@ -9,15 +9,17 @@ export default function HomePage() {
         <Flex alignItems={'flex-end'} marginBottom="4rem">
           <Textarea
             fontSize="24px"
-            background={'ffffff'}
+            background={'white'}
             padding="18px 36px"
-            width="37.5rem"
+            width="40rem"
             height="126px"
             borderRadius="15px"
             placeholder="Type a question..."
+            color={'#7c7c7c'}
+            _placeholder={{ color: '#7c7c7c' }}
           />
-          <Button marginLeft="32px" colorScheme="blue">
-            Button
+          <Button borderRadius='20px' height='45px' width='120px' marginLeft="32px" color='white' background={'#3182CE'} fontWeight={700} fontSize='24px'>
+            SEND
           </Button>
         </Flex>
         <QuestionCard />

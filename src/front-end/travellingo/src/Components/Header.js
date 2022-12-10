@@ -19,7 +19,7 @@ export default function Header() {
     >
       <Flex justifyContent={'space-around'}>
         <Flex id="nav" justifyContent="space-around" width="50vw">
-          {navItems.map(navItem => (
+          {navItems.map((navItem, key) => (
             <Text
               fontWeight=" bold"
               margin="0 10px"

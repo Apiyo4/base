@@ -4,7 +4,7 @@ import { questions } from '../Utils/utils';
 export default function QuestionCard() {
   return (
     <Box>
-      {questions.map(item => (
+      {questions.map((item, key) => (
         <Flex
           maxWidth={'730px'}
           background="#ffffff"
@@ -22,6 +22,7 @@ export default function QuestionCard() {
             letterSpacing="2px"
             textDecoration="none"
             textAlign={'center'}
+            color='#000000'
           >
             {item.question}
           </Text>
@@ -33,6 +34,7 @@ export default function QuestionCard() {
             letterSpacing="2px"
             textDecoration="none"
             textAlign={'center'}
+            color='#000000'
           >
             {item.answer}
           </Text>
