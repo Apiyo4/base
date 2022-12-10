@@ -7,7 +7,7 @@ const questionSchema = mongoose.Schema(
     },
     answer: {
       type: String,
-      default: "",
+      default: null,
     },
   },
   { timestamps: true }

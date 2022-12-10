@@ -5,7 +5,6 @@ const getTests = asyncHandler(async (req, res) => {
   res.status(200).json(tests);
 });
 const setTest = asyncHandler(async (req, res) => {
-    console.log(req.body, 'test')
   if (!req.body) {
     res.status(400);
     throw new Error("Please add a test body");

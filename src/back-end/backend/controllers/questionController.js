@@ -1,7 +1,11 @@
 const asyncHandler = require("express-async-handler");
 const Question = require("../models/questionModel");
 const getQuestions = asyncHandler(async (req, res) => {
-  const questions = await Question.find();
+  const questions = await Question.find({answer: null});
+  res.status(200).json(questions);
+});
+const getAnsweredQuestions = asyncHandler(async (req, res) => {
+  const questions = await Question.find({answer: { "$ne": null }});
   res.status(200).json(questions);
 });
 const setQuestion = asyncHandler(async (req, res) => {
@@ -11,7 +15,7 @@ const setQuestion = asyncHandler(async (req, res) => {
   }
   const question = await Question.create({
     question: req.body.question,
-    answer: "",
+    answer: null,
   });
 
   res.status(200).json(question);
@@ -38,4 +42,4 @@ const updateQuestion = asyncHandler(async (req, res) => {
   res.status(200).json({ updatedQuestion});
 });
 
-module.exports = { getQuestions, setQuestion,updateQuestion, deleteQuestion };
+module.exports = { getQuestions, setQuestion,updateQuestion, deleteQuestion, getAnsweredQuestions };
