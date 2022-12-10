@@ -9,6 +9,10 @@ const testSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add a question"],
     },
+    dificulty: {
+        type: String,
+        required: [true, "Please add dificulty level"],
+      },
     choices:{
         choice1: {
             type: String,
