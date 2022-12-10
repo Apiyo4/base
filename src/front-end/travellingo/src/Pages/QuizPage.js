@@ -8,6 +8,7 @@ export default function QuizPage() {
   const time = 5;
   const [counter, setCounter] = React.useState(time);
   const [questionNumber, setQuestionNumber] = React.useState(0);
+  const [value, setValue] = React.useState(null);
 
   React.useEffect(() => {
     const timer =
@@ -20,7 +21,14 @@ export default function QuizPage() {
       setQuestionNumber(questionNumber + 1);
       setCounter(counter + time);
     }
-  }, [counter, questionNumber]);
+  }, [counter, questionNumber, value]);
+  // React.useEffect(() => {
+
+  //   if (questionNumber < 3) {
+  //     setQuestionNumber(questionNumber + 1);
+  //   }
+  //   setCounter(time);
+  // }, []);
 
   return (
     <Flex
@@ -39,24 +47,13 @@ export default function QuizPage() {
               questionNumber={questionNumber}
               setCounter={setCounter}
               time={time}
+              value={value}
+              setValue={setValue}
             />
-            {/* <Button
-              marginBottom="64px"
-              borderRadius="20px"
-              height="45px"
-              width="133px"
-              marginLeft="32px"
-              color='#fff'
-              background={'#3182CE'}
-              fontWeight={700}
-              fontSize="24px"
-            >
-              SEND
-            </Button> */}
           </Flex>
         </Box>
         <Box marginLeft={'15%'}>
-        <Text
+          <Text
             fontWeight={'semi-bold'}
             fontFamily="Montserrat"
             fontSize="20px"
@@ -100,7 +97,7 @@ export default function QuizPage() {
               sec{counter === 0 ? '' : 's'}
             </Text>
           </Flex>
-          
+
           <Button
             marginBottom="64px"
             borderRadius="20px"

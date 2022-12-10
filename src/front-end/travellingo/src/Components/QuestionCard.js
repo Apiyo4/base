@@ -1,7 +1,17 @@
 import { Box, Text, Flex } from '@chakra-ui/react';
 import React from 'react';
-import { questions } from '../Utils/utils';
+import axios from 'axios';
 export default function QuestionCard() {
+  const [questions, setQuestions] = React.useState([])
+  const base_url = process.env.REACT_APP_BASE_URL
+  React.useEffect(() => {
+    axios
+      .get(`${base_url}/questions/answered`)
+      .then(res => {
+        setQuestions(res.data);
+      })
+      .catch(error => console.log(error));
+  }, []);
   return (
     <Box>
       {questions.map((item, key) => (
@@ -13,6 +23,7 @@ export default function QuestionCard() {
           borderRadius="30px"
           flexDirection="column"
           justifyContent="center"
+          
         >
           <Text
             fontWeight={700}

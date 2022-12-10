@@ -17,7 +17,8 @@ const setTest = asyncHandler(async (req, res) => {
         choice2: req.body.choices.choice2,
         choice3: req.body.choices.choice3,
         choice4: req.body.choices.choice4,
-    }
+    },
+    difficulty: req.body.difficulty
     
   });
 

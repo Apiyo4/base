@@ -7,6 +7,8 @@ export function QuizCard({
   questionNumber,
   setCounter,
   time,
+  value,
+  setValue,
 }) {
   return (
     <Box>
@@ -36,12 +38,13 @@ export function QuizCard({
         </Text>
         <RadioGroup
           color={'#000000'}
-          onClick={() => {
-            if (questionNumber < 3) {
-              setQuestionNumber(questionNumber + 1);
-            }
-            setCounter(time);
-          }}
+          onChange={setValue} value={value}
+          // onClick={() => {
+          //   if (questionNumber < 3) {
+          //     setQuestionNumber(questionNumber + 1);
+          //   }
+          //   setCounter(time);
+          // }}
         >
           <Stack align="left" color={'#000000'} paddingX="3.75rem">
             {quizQuestion.choices.map((choice, key) => {
