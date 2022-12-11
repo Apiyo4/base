@@ -33,8 +33,23 @@ export default function Header() {
               </NavLink>
             </Text>
           ))}
+          <Text
+            fontWeight=" bold"
+            margin="0 10px"
+            color="#7C7C7C"
+            fontSize="20px"
+            letterSpacing="2px"
+            textDecoration="none"
+          >
+            {localStorage.hasOwnProperty('token') && (
+              <NavLink className={''} to={'guru'}>
+                GURUTOOLS
+              </NavLink>
+            )}
+          </Text>
         </Flex>
       </Flex>
+
       <Text
         fontWeight=" bold"
         margin="0 10px"
@@ -43,9 +58,9 @@ export default function Header() {
         letterSpacing="2px"
         textDecoration="none"
       >
-        <NavLink className={''} to="/signup">
+        {localStorage.hasOwnProperty('loggedIn') ? <NavLink to='/' >Logout</NavLink> :  <NavLink className={''} to="/signup">
           SIGNUP
-        </NavLink>
+        </NavLink>}
       </Text>
     </Flex>
   );

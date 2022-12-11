@@ -1,15 +1,32 @@
 import { Button, Flex, Box, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import { QuizCard } from '../Components/QuizCard';
 import QuizProgress from '../Components/QuizProgress';
 import { quiz } from '../Utils/utils';
-
+import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 export default function QuizPage() {
-  const time = 5;
+  const time = 15;
   const [counter, setCounter] = React.useState(time);
   const [questionNumber, setQuestionNumber] = React.useState(0);
   const [value, setValue] = React.useState(null);
+  const [questions, setQuestions] = useState([])
+  const location = useLocation()
+  const base_url = process.env.REACT_APP_BASE_URL
+  React.useEffect(()=>{
+    axios.get(`${base_url}/tests`).then(
+      res=>{
 
+        setQuestions(res.data)
+      }
+    )
+  },[questions])
+  React.useEffect(()=>{
+    if(location.state.guru && questions.length > 1){
+      setQuestions(questions.sort((a, b) => b.difficulty - a.difficulty).slice(0,  5))
+    }
+    
+  }, [location.state])
   React.useEffect(() => {
     const timer =
       counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
@@ -22,13 +39,9 @@ export default function QuizPage() {
       setCounter(counter + time);
     }
   }, [counter, questionNumber, value]);
-  // React.useEffect(() => {
-
-  //   if (questionNumber < 3) {
-  //     setQuestionNumber(questionNumber + 1);
-  //   }
-  //   setCounter(time);
-  // }, []);
+  if(questions.length < 1){
+    return <p>Loading</p>
+  }
 
   return (
     <Flex

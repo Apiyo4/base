@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { useNavigate, Link } from "react-router-dom";
 import {
   Box,
   Flex,
@@ -8,13 +9,34 @@ import {
   InputRightElement,
   Button,
 } from '@chakra-ui/react';
-import { FaBeer, FaEye, FaEyeSlash } from 'react-icons/fa';
+import {  FaEye, FaEyeSlash } from 'react-icons/fa';
+import axios from 'axios';
 
 export default function SignUpPage() {
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const base_url = process.env.REACT_APP_BASE_URL
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const navigate = useNavigate();
   const toggleVisible = e => {
     e.preventDefault();
     setPasswordVisible(prevState => !prevState);
+  };
+  const submit = () => {
+    axios.post(`${base_url}/users`, {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
+    })
+      .then(res => {
+        debugger;
+        localStorage.setItem('loggedIn', 'yes');
+        navigate('/quiz', {state: {guru: true}})
+      })
+      .catch(error => {
+        alert(error.message);
+      });
   };
   return (
     <Flex height={'max-content'} width='70%' background="#fff" borderRadius="80px" justifyContent={'center'}   margin="0 auto">
@@ -53,6 +75,7 @@ export default function SignUpPage() {
             paddingLeft={'2rem'}
             marginTop="2rem"
             _placeholder={{ opacity: 1, color: '#000000' }}
+            ref={nameRef}
           />
 
           <Input
@@ -66,6 +89,7 @@ export default function SignUpPage() {
             paddingLeft={'2rem'}
             marginY="2rem"
             _placeholder={{ opacity: 1, color: '#000000' }}
+            ref={emailRef}
           />
           <InputGroup size="md">
             <Input
@@ -78,6 +102,7 @@ export default function SignUpPage() {
               border="2px solid #3AA5F3"
               paddingLeft={'2rem'}
               _placeholder={{ opacity: 1, color: '#000000' }}
+              ref={passwordRef}
             />
             <InputRightElement width="4.5rem">
               <Button as="span" h="1.75rem" size="sm" onClick={toggleVisible} margin='2 rem auto'>
@@ -95,9 +120,11 @@ export default function SignUpPage() {
             fontWeight={700}
             fontSize="24px"
             marginTop={'3rem'}
+            onClick={submit}
           >
             SIGN UP
           </Button>
+          <Text>Already have an account? <Link to='/login'>Login</Link></Text>
         </Box>
       </Flex>
     </Flex>

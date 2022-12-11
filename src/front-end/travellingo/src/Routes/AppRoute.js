@@ -5,6 +5,7 @@ import {
   Routes,
   useLocation,
   useRouteMatch,
+  Navigate,
 } from 'react-router-dom';
 import HomePage from '../Pages/HomePage';
 import SignUpPage from '../Pages/SignUpPage';
@@ -17,6 +18,7 @@ import Greetings from '../Pages/Content/Greetings';
 import CommonWords from '../Pages/Content/CommonWords';
 import Foods from '../Pages/Content/Foods';
 import Directions from '../Pages/Content/Directions';
+import GuruTools from '../Pages/GuruTools';
 
 export default function AppRoutes() {
   return (
@@ -33,6 +35,9 @@ export default function AppRoutes() {
         <Route path="content/foods" exact element={<Foods />} />
         <Route path="content/directions" exact element={<Directions />} />
         <Route path="game" exact element={<GamePage />} />
+        {localStorage.hasOwnProperty('token') && (
+          <Route path="/guru" element={<GuruTools />} />
+        )}
       </Routes>
     </>
   );

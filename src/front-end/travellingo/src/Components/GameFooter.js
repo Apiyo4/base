@@ -1,6 +1,10 @@
 import { Flex, Input, Button } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { ans, colors, gameObj } from '../Utils/utils';
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 export default function GameFooter({
   word,
   setWord,
@@ -8,10 +12,20 @@ export default function GameFooter({
   setWordsFound,
   setImageUrl,
   imageUrl,
+  setWordList,
+  wordList
 }) {
+  const handleInputChange = e => {
+    let inputValue = e.target.value;
+    setWord(inputValue);
+  };
+  useEffect(() => {}, [wordsFound]);
+  console.log(wordsFound);
   return (
     <Flex width="681px" margin={'2rem auto'} justifyContent={'center'}>
       <Input
+        value={word}
+        onChange={handleInputChange}
         type="text"
         pr="4.5rem"
         height="60px"
@@ -24,10 +38,21 @@ export default function GameFooter({
       />
       <Button
         onClick={() => {
-          if (wordsFound > 4) {
-            setImageUrl(imageUrl);
+          if (ans.includes(word.trim().toLowerCase()) && !wordList.includes(word.trim().toLowerCase())) {
+            const no = getRandomInt(17);
+            for (let i = 0; i < gameObj[word.trim().toLowerCase()].length; i++) {
+              const element = document.querySelector(
+                `.letter${gameObj[word.trim().toLowerCase()][i]}`
+              );
+              setWordList([...wordList, word.trim().toLowerCase()])
+              element.style.color = colors[no];
+            }
+            if (wordsFound > 3) {
+              setImageUrl(imageUrl);
+            }
+            setWordsFound(wrd => wrd + 1);
           }
-          setWordsFound(wrd => wrd + 1);
+          setWord('')
         }}
         borderRadius="20px"
         height="60px"

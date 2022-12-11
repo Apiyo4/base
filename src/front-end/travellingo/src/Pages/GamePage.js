@@ -10,6 +10,7 @@ import { gameArray1 } from '../Utils/utils';
 export default function GamePage() {
   const [wordsFound, setWordsFound] = useState(0);
   const [word, setWord] = useState('');
+  const [wordList, setWordList] = useState([])
   const [imageUrl, setImageUrl] = useState(sadImage);
   return (
     <Box marginTop="-20px">
@@ -18,7 +19,7 @@ export default function GamePage() {
         <Box height="532px" width="681px" background={'white'}>
           <Flex flexWrap={'wrap'}>
             {gameArray1.map((ar, key) => (
-              <GameCard ar={ar} />
+              <GameCard index={key} ar={ar} />
             ))}
           </Flex>
         </Box>
@@ -30,6 +31,8 @@ export default function GamePage() {
         setWordsFound={setWordsFound}
         setImageUrl={setImageUrl}
         imageUrl={happyImage}
+        setWordList= {setWordList}
+        wordList = {wordList}
       />
     </Box>
   );
