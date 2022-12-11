@@ -9,6 +9,30 @@ Travel Lingo is a web based application that provides the platform by which anyo
 * Annette Odingo (System Analyst, Software Developer)
 * Samuel Hudson Manwa Maangi (Software Engineer, GUI)
 
-## Prerequisites
+## Prerequisites (Technical user and installation guide)
+
+Installation requirements
+-	Computer with processor 1.7 GHz or higher
+- Microsoft Windows & or latest versions
+- A Minimum of 1GB  RAM
+- At least 200MB hard disk storage space
+- A mouse or pointing device
 
 ## Run Instructions
+
+
+### To run back-end
+- Navigate to src/ backend
+- Create a .env file
+- Add the  environment variables: NODE_ENV, JWT_SECRET, Mongo_Uri and port number
+- Run on the terminal :   npm  insall
+- Run on the terminal :  npm run server
+
+### To run front-end
+- Navigate to traveling
+- Run npm i 
+- Create a .env file
+- Add the environment variables :  REACT_APP_BASE_URL 
+- Run on the terminal: npm start
+
+#### Note: For back-end will be hosting on render.com and for front-end we will be hosting on vercel
