@@ -73,7 +73,7 @@ This document is the software-requirements specification document and it outline
 | NFR4 | The system shall change the emoticons in the Gaming module in less than a second once progress is made in the game |
 | NFR5 | The application make changes to the status bar indicating the progress of a test in less than a second once the user progresses to the next question.  |
   
-### Performance Requirements 
+### Security Requirements 
 
 | ID  | Requirement |
 | :-------------: | :----------: |
