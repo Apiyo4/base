@@ -8,7 +8,7 @@ import {  FaEye, FaEyeSlash } from 'react-icons/fa';
 export default function LoginPage(){
     
       const [passwordVisible, setPasswordVisible] = useState(false);
-      const base_url = 'https://travellingo.onrender.com/api/'
+      const base_url = 'https://travellingo.onrender.com/api'
       const emailRef = useRef();
       const passwordRef = useRef();
       const navigate = useNavigate();

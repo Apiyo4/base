@@ -3,11 +3,12 @@ import React from 'react';
 import axios from 'axios';
 export default function QuestionCard() {
   const [questions, setQuestions] = React.useState([])
-  const base_url = 'https://travellingo.onrender.com/api/'
+  const base_url = 'https://travellingo.onrender.com/api'
   React.useEffect(() => {
     axios
       .get(`${base_url}/questions/answered`)
       .then(res => {
+        debugger;
         setQuestions(res.data);
       })
       .catch(error => console.log(error));

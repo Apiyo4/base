@@ -14,7 +14,7 @@ import axios from 'axios';
 
 export default function SignUpPage() {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const base_url = 'https://travellingo.onrender.com/api/'
+  const base_url = 'https://travellingo.onrender.com/api'
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
