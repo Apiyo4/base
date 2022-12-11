@@ -21,18 +21,35 @@ Installation requirements
 ## Run Instructions
 
 
-### To run back-end
+### To run back-end locally
+endpoints: 
+ POST /questions -> all users can ask a question
+ GET /tests -> all users can take a test
+ GET /questions/answered -> ll ausers can see answered questions
+ POST /users -> all users can register
+ POST /users/login -> all users can login
+ authenticated Routes:
+ PUT /questions -> guru can answer a question
+ POST /tests -> guru can add tests
+ DELETE /questions -> guru can delete irrelevant questions
+ 
 - Navigate to src/ backend
 - Create a .env file
 - Add the  environment variables: NODE_ENV, JWT_SECRET, Mongo_Uri and port number
 - Run on the terminal :   npm  insall
 - Run on the terminal :  npm run server
 
-### To run front-end
+### To visit deployed backend site :
+navigate to:  https://travellingo.onrender.com/api
+
+### To run front-end locally
 - Navigate to traveling
 - Run npm i 
 - Create a .env file
 - Add the environment variables :  REACT_APP_BASE_URL 
 - Run on the terminal: npm start
+
+### To visit deployed front-end site :
+navigate to:  https://base-fvw2-dtuxc045a-odingoannette.vercel.app
 
 #### Note: For back-end will be hosting on render.com and for front-end we will be hosting on vercel
