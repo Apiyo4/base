@@ -25,5 +25,5 @@ Travel Lingo is a web based application that provides the platform by which anyo
 - [Traceability](https://github.com/Apiyo4/base/blob/master/docs/treacability.md)
 
 ### Presentation
-- [Midterm Presentation](https://github.com/Apiyo4/base/blob/master/docs/Travel_Lingo.pdf))
+- [Midterm Presentation](https://github.com/Apiyo4/base/blob/master/docs/Travel_Lingo.pdf)
 - [Finals Presentation]()
