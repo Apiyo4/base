@@ -12,7 +12,7 @@ export default function QuizPage() {
   const [value, setValue] = React.useState(null);
   const [questions, setQuestions] = useState([])
   const location = useLocation()
-  const base_url = process.env.REACT_APP_BASE_URL
+  const base_url = 'https://travellingo.onrender.com/api/'
   React.useEffect(()=>{
     axios.get(`${base_url}/tests`).then(
       res=>{

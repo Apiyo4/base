@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export default function HomePage() {
   const [value, setValue] = React.useState('');
-  const base_url = process.env.REACT_APP_BASE_URL
+  const base_url = 'https://travellingo.onrender.com/api/'
 
   const handleInputChange = e => {
     let inputValue = e.target.value;
