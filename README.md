@@ -47,6 +47,6 @@ navigate to:  https://travellingo.onrender.com/api
 - Run on the terminal: npm start
 
 ### To visit deployed front-end site :
-navigate to:  https://base-fvw2-dtuxc045a-odingoannette.vercel.app
+navigate to:  https://base-fvw2.vercel.app/
 
 #### Note: For back-end will be hosting on render.com and for front-end we will be hosting on vercel

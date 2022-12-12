@@ -6,16 +6,31 @@ This section links together all software artifacts and Software requirements in 
 
 | Artifact ID  | Artifact Name | Requirement ID |
 | :-------------: | :----------: | :----------: |
-| UseCase1 | Move Player | FR5 |
-| … | … | … |
+| UseCase1 | Mark Test | NFR1, NFR3 | 
+| UseCase2 | Take Test | FR12-17, NFR5 |
+| UseCase3 | Play Game | FR6-11, NFR4 |
+| UseCase4 | Read Curriculum | FR24-28 |       
+| UseCase5 | Ask Questions | FR4, FR21 | 
+| UseCase6 | Login | FR1-2, NFR6-10  |
+| UseCase7 | Set Test | FR3 |
+| UseCase8 | Answer Question | FR3-4 |
+| UseCase9 | Modify curriculum | FR3 |
+
 
 
 ## Class Diagram Traceability
 
 | Artifact Name | Requirement ID |
 | :-------------: |:----------: |
-| classPlayer | NFR3, FR5 |
-| … | … | … |
+| TravelLingoClass | FR3-4, FR6-13, FR21, NFR1, NFR3, NFR6-10 |
+| Guru_and_Test_build1 class | FR1-4, FR21, NFR6-10 |
+| Guru&TestClassInstance |FR1-4, FR21, NFR6-10 |
+| Admin&Method_class_design | FR1-2, NFR6-10 |
+| Guru_CRC_card | FR3-4, FR12, FR15-17 |
+| UserClass_CRC_card | FR4, FR6-11, FR21, NFR4 |
+| System_CRC_card | NFR1, NFR3 |
+| Guru&TestClasses_DB |FR1-4, NFR6-10 |
+
 
 
 ## Activity Diagram Traceability
@@ -24,5 +39,6 @@ This section links together all software artifacts and Software requirements in 
 
 | Artifact ID  | Artifact Name | Requirement ID |
 | :-------------: | :----------: | :----------: |
-| <filename> | Handle Player Input | FR1-5, NFR2 |
-| … | … | … |
+| Activity diagram take test.jpg | Take Test process | FR12-17, NFR5 |
+| Sequential diagram_AnswerQuestion.jpg | Answer Question task | FR3-4 |
+| State Machine Diagram_AnswerQuestion.jpg | AnswerQuiz States | FR3-4 |
