@@ -79,10 +79,10 @@ export default function GamePage() {
           </ModalBody>
 
           <ModalFooter>
-            <Flex justifyContent={'space-around'}>
+            <Flex justifyLoginContent={'space-around'}>
               <Button
                 colorScheme="blue"
-                ml={3}
+                mr={3}
                 onClick={() => {
                   onClose();
                   window.location.reload();

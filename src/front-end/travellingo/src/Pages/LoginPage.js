@@ -125,7 +125,7 @@ export default function LoginPage() {
             LOGIN
           </Button>
           <Text>
-            Already have an account? <Link to="/signup">Signup</Link>
+            Don't have an account? <Link to="/signup">Signup</Link>
           </Text>
         </Box>
       </Flex>
