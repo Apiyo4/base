@@ -19,23 +19,48 @@ export const questions = [
 export const quiz = [
   {
     question: 'Siku njema huonekana ...?',
-    choices: ['asubuhi', 'jioni', 'mchana', 'kesho'],
+    choices: {
+      "choice1": "asubuhi",
+      "choice2": "jioni",
+      "choice3": "mchana",
+      "choice4": "kesho"
+  },
   },
   {
     question: '1Siku njema huonekana ...?',
-    choices: ['asubuhi', 'jioni', 'mchana', 'kesho'],
+    choices: {
+      "choice1": "asubuhi",
+      "choice2": "jioni",
+      "choice3": "mchana",
+      "choice4": "kesho"
+  },
   },
   {
     question: '2Siku njema huonekana ...?',
-    choices: ['asubuhi', 'jioni', 'mchana', 'kesho'],
+    choices: {
+      "choice1": "asubuhi",
+      "choice2": "jioni",
+      "choice3": "mchana",
+      "choice4": "kesho"
+  },
   },
   {
     question: '3Siku njema huonekana ...?',
-    choices: ['asubuhi', 'jioni', 'mchana', 'kesho'],
+    choices: {
+      "choice1": "asubuhi",
+      "choice2": "jioni",
+      "choice3": "mchana",
+      "choice4": "kesho"
+  },
   },
   {
     question: '4Siku njema huonekana ...?',
-    choices: ['asubuhi', 'jioni', 'mchana', 'kesho'],
+    choices: {
+      "choice1": "asubuhi",
+      "choice2": "jioni",
+      "choice3": "mchana",
+      "choice4": "kesho"
+  },
   },
 ];
 

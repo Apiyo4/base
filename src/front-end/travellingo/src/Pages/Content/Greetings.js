@@ -23,9 +23,10 @@ export default function Greetings() {
       </Text>
 
       <Flex flexWrap={'wrap'} justifyContent="space-around">
-        {greetings.map(greeting => {
+        {greetings.map((greeting, indx) => {
           return (
             <Flex
+              key={indx}
               py={'2rem'}
               borderRadius={'2rem'}
               textAlign={'center'}

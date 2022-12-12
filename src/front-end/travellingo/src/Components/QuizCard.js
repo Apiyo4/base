@@ -1,15 +1,24 @@
-import { Box, Flex, Text, RadioGroup, Stack, Radio } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Text,
+  Spinner,
+  RadioGroup,
+  Stack,
+  Radio,
+} from '@chakra-ui/react';
 import React from 'react';
 
-export function QuizCard({
-  quizQuestion,
-  setQuestionNumber,
-  questionNumber,
-  setCounter,
-  time,
-  value,
-  setValue,
-}) {
+export function QuizCard({ quizQuestion, value, setValue }) {
+  if (!quizQuestion) {
+    return (
+      <Box width="max-content" margin="0 auto" height="calc(100% - 228px)">
+        {' '}
+        <Spinner color="red.500" />{' '}
+      </Box>
+    );
+  }
+
   return (
     <Box>
       <Flex
@@ -36,21 +45,12 @@ export function QuizCard({
         >
           {quizQuestion.question}
         </Text>
-        <RadioGroup
-          color={'#000000'}
-          onChange={setValue} value={value}
-          // onClick={() => {
-          //   if (questionNumber < 3) {
-          //     setQuestionNumber(questionNumber + 1);
-          //   }
-          //   setCounter(time);
-          // }}
-        >
+        <RadioGroup color={'#000000'} onChange={setValue} value={value}>
           <Stack align="left" color={'#000000'} paddingX="3.75rem">
-            {quizQuestion.choices.map((choice, key) => {
+            {Object.values(quizQuestion.choices).map((choice, key) => {
               return (
                 <Radio
-                  value={(key + 1).toString()}
+                  value={choice.toString()}
                   fontWeight={'normal'}
                   fontFamily="Montserrat"
                   fontSize="18px"

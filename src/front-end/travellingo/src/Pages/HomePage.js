@@ -5,16 +5,17 @@ import axios from 'axios';
 
 export default function HomePage() {
   const [value, setValue] = React.useState('');
-  const base_url = 'https://travellingo.onrender.com/api'
-
+  const base_url = 'https://travellingo.onrender.com/api';
+  // const base_url = process.env.REACT_APP_BASE_URL
   const handleInputChange = e => {
     let inputValue = e.target.value;
     setValue(inputValue);
   };
-  const submitHandler = val =>{
-    axios.post(`${base_url}/questions`, {question: value})
-    setValue('')
-  }
+  const submitHandler = val => {
+    axios.post(`${base_url}/questions`, { question: value }).catch(error => {
+    });;
+    setValue('');
+  };
   return (
     <Flex justifyContent="center">
       <Box>
@@ -41,7 +42,9 @@ export default function HomePage() {
             background={'#3182CE'}
             fontWeight={700}
             fontSize="24px"
-            onClick={()=>submitHandler(value)}
+            _hover={{ background: '#3182CE' }}
+            _active={{ background: '#3182CE' }}
+            onClick={() => submitHandler(value)}
           >
             SEND
           </Button>

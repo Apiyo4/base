@@ -6,13 +6,14 @@ export default function Directions(){
         <Box>
        <Text textAlign= 'center' fontSize="24px"  fontWeight={600}>Directions</Text>     
       <Text textAlign={'center'} fontSize="22px" marginBottom={'2rem'}>
-      Great! Let us have some fun counting...
+      East, west, south, north...
       </Text>
 
       <Flex flexWrap={'wrap'} justifyContent="space-around">
-        {directions.map(direction => {
+        {directions.map((direction, index) => {
           return (
             <Box
+              key = {index}
               py={'2rem'}
               borderRadius={'2rem'}
               textAlign={'center'}

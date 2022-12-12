@@ -24,9 +24,10 @@ export default function Foods(){
       </Text>
 
       <Flex flexWrap={'wrap'} justifyContent="space-around">
-        {foods.map(food => {
+        {foods.map((food, indx) => {
           return (
             <Flex
+              key={indx}
               py={'2rem'}
               borderRadius={'2rem'}
               textAlign={'center'}

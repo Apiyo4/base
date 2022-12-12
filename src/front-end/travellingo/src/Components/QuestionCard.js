@@ -1,22 +1,32 @@
-import { Box, Text, Flex } from '@chakra-ui/react';
+import { Box, Text, Flex, Spinner } from '@chakra-ui/react';
 import React from 'react';
 import axios from 'axios';
 export default function QuestionCard() {
   const [questions, setQuestions] = React.useState([])
   const base_url = 'https://travellingo.onrender.com/api'
+  // const base_url = process.env.REACT_APP_BASE_URL
   React.useEffect(() => {
     axios
       .get(`${base_url}/questions/answered`)
       .then(res => {
-        debugger;
-        setQuestions(res.data);
+        setQuestions(res.data.sort((a,b)=>  new Date(b.updatedAt) -  new Date(a.updatedAt) ));
       })
       .catch(error => console.log(error));
   }, []);
+  if (!questions) {
+    return (
+      <Box width="max-content" margin="0 auto" height="calc(100% - 228px)">
+        {' '}
+        <Spinner color="red.500" />{' '}
+      </Box>
+    );
+  }
+  
   return (
     <Box>
       {questions.map((item, key) => (
         <Flex
+          key={key}
           maxWidth={'730px'}
           background="#ffffff"
           height="161px"

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from 'react-router-dom';
 import {
   Box,
   Flex,
@@ -9,12 +9,13 @@ import {
   InputRightElement,
   Button,
 } from '@chakra-ui/react';
-import {  FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import axios from 'axios';
 
 export default function SignUpPage() {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const base_url = 'https://travellingo.onrender.com/api'
+  const base_url = 'https://travellingo.onrender.com/api';
+  // const base_url = process.env.REACT_APP_BASE_URL
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -24,23 +25,39 @@ export default function SignUpPage() {
     setPasswordVisible(prevState => !prevState);
   };
   const submit = () => {
-    axios.post(`${base_url}/users`, {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      password: passwordRef.current.value,
-    })
+    axios
+      .post(`${base_url}/users`, {
+        name: nameRef.current.value,
+        email: emailRef.current.value,
+        password: passwordRef.current.value,
+      })
       .then(res => {
-        debugger;
-        localStorage.setItem('loggedIn', 'yes');
-        navigate('/quiz', {state: {guru: true}})
+        const user = res.data;
+        sessionStorage.setItem('loggedIn', 'yes');
+        navigate('/quiz', { state: { user } });
       })
       .catch(error => {
         alert(error.message);
       });
+    nameRef.current.value = '';
+    passwordRef.current.value = '';
+    emailRef.current.value = '';
   };
   return (
-    <Flex height={'max-content'} width='70%' background="#fff" borderRadius="80px" justifyContent={'center'}   margin="0 auto">
-      <Flex py="4rem" flexDirection={'column'} textAlign='center' width={'400px'}>
+    <Flex
+      height={'max-content'}
+      width="70%"
+      background="#fff"
+      borderRadius="80px"
+      justifyContent={'center'}
+      margin="0 auto"
+    >
+      <Flex
+        py="4rem"
+        flexDirection={'column'}
+        textAlign="center"
+        width={'400px'}
+      >
         <Text
           fontFamily="Montserrat"
           fontSize="36px"
@@ -105,7 +122,13 @@ export default function SignUpPage() {
               ref={passwordRef}
             />
             <InputRightElement width="4.5rem">
-              <Button as="span" h="1.75rem" size="sm" onClick={toggleVisible} margin='2 rem auto'>
+              <Button
+                as="span"
+                h="1.75rem"
+                size="sm"
+                onClick={toggleVisible}
+                margin="2 rem auto"
+              >
                 {passwordVisible ? <FaEye /> : <FaEyeSlash />}
               </Button>
             </InputRightElement>
@@ -120,11 +143,15 @@ export default function SignUpPage() {
             fontWeight={700}
             fontSize="24px"
             marginTop={'3rem'}
+            _hover={{ background: '#3182CE' }}
+            _active={{ background: '#3182CE' }}
             onClick={submit}
           >
             SIGN UP
           </Button>
-          <Text>Already have an account? <Link to='/login'>Login</Link></Text>
+          <Text>
+            Already have an account? <Link to="/login">Login</Link>
+          </Text>
         </Box>
       </Flex>
     </Flex>

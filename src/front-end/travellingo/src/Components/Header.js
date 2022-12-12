@@ -1,6 +1,6 @@
 import { Box, Text, Flex } from '@chakra-ui/react';
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 export default function Header() {
   const navItems = [
     { title: 'home', path: '/' },
@@ -8,6 +8,15 @@ export default function Header() {
     { title: 'content', path: '/content' },
     { title: 'game', path: '/game' },
   ];
+  const navigate = useNavigate();
+  const logout = () => {
+    if (sessionStorage.hasOwnProperty('loggedIn')) {
+      sessionStorage.clear();
+      // window.location.reload();
+    }
+  };
+  useEffect(() => {}, [sessionStorage]);
+
   return (
     <Flex
       display="flex"
@@ -19,8 +28,9 @@ export default function Header() {
     >
       <Flex justifyContent={'space-around'}>
         <Flex id="nav" justifyContent="space-around" width="50vw">
-          {navItems.map((navItem, key) => (
+          {navItems.map((navItem, index) => (
             <Text
+              key = {index}
               fontWeight=" bold"
               margin="0 10px"
               color="#7C7C7C"
@@ -40,8 +50,9 @@ export default function Header() {
             fontSize="20px"
             letterSpacing="2px"
             textDecoration="none"
+            // onClick={() => window.location.reload()}
           >
-            {localStorage.hasOwnProperty('token') && (
+            {sessionStorage.getItem('token') && (
               <NavLink className={''} to={'guru'}>
                 GURUTOOLS
               </NavLink>
@@ -57,10 +68,16 @@ export default function Header() {
         fontSize="20px"
         letterSpacing="2px"
         textDecoration="none"
+        onClick={logout}
       >
-        {localStorage.hasOwnProperty('loggedIn') ? <NavLink to='/' >Logout</NavLink> :  <NavLink className={''} to="/signup">
-          SIGNUP
-        </NavLink>}
+        {!sessionStorage.getItem('loggedIn') ? (
+            <NavLink className={''} to="/signup">
+            SIGNUP
+          </NavLink>
+        ) : (
+          
+          <NavLink className={''} to="/login" >LOGOUT</NavLink>
+        )}
       </Text>
     </Flex>
   );

@@ -19,6 +19,9 @@ import CommonWords from '../Pages/Content/CommonWords';
 import Foods from '../Pages/Content/Foods';
 import Directions from '../Pages/Content/Directions';
 import GuruTools from '../Pages/GuruTools';
+import ProtectedRoute from './ProtectedRoute';
+import AnswerQuestions from '../Components/AnswerQuestions';
+import SetTests from '../Components/SetTests';
 
 export default function AppRoutes() {
   return (
@@ -35,9 +38,11 @@ export default function AppRoutes() {
         <Route path="content/foods" exact element={<Foods />} />
         <Route path="content/directions" exact element={<Directions />} />
         <Route path="game" exact element={<GamePage />} />
-        {localStorage.hasOwnProperty('token') && (
-          <Route path="/guru" element={<GuruTools />} />
-        )}
+        <Route path="/guru" element={<ProtectedRoute><GuruTools /></ProtectedRoute>}>
+          
+        <Route index element={<AnswerQuestions />} />
+          <Route path="answer" element={<AnswerQuestions />} />
+          <Route path="set" element={<SetTests />} /> </Route>
       </Routes>
     </>
   );

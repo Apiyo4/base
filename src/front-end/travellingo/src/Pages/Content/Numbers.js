@@ -5,7 +5,6 @@ import { numbers } from '../../Utils/utils';
 export default function Numbers() {
   return (
     <Box>
-      
       <Text textAlign="center" fontSize="24px" fontWeight={600}>
         Numbers
       </Text>
@@ -14,9 +13,10 @@ export default function Numbers() {
       </Text>
 
       <Flex flexWrap={'wrap'} justifyContent="space-around">
-        {numbers.map(number => {
+        {numbers.map((number, indx) => {
           return (
             <Box
+              key={indx}
               py={'2rem'}
               borderRadius={'2rem'}
               textAlign={'center'}

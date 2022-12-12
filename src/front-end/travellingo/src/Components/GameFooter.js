@@ -13,17 +13,17 @@ export default function GameFooter({
   setImageUrl,
   imageUrl,
   setWordList,
-  wordList
+  wordList,
 }) {
   const handleInputChange = e => {
     let inputValue = e.target.value;
     setWord(inputValue);
   };
   useEffect(() => {}, [wordsFound]);
-  console.log(wordsFound);
   return (
     <Flex width="681px" margin={'2rem auto'} justifyContent={'center'}>
       <Input
+        id="gameInput"
         value={word}
         onChange={handleInputChange}
         type="text"
@@ -37,14 +37,22 @@ export default function GameFooter({
         background={'#fff'}
       />
       <Button
+        id="gameButton"
         onClick={() => {
-          if (ans.includes(word.trim().toLowerCase()) && !wordList.includes(word.trim().toLowerCase())) {
+          if (
+            ans.includes(word.trim().toLowerCase()) &&
+            !wordList.includes(word.trim().toLowerCase())
+          ) {
             const no = getRandomInt(17);
-            for (let i = 0; i < gameObj[word.trim().toLowerCase()].length; i++) {
+            for (
+              let i = 0;
+              i < gameObj[word.trim().toLowerCase()].length;
+              i++
+            ) {
               const element = document.querySelector(
                 `.letter${gameObj[word.trim().toLowerCase()][i]}`
               );
-              setWordList([...wordList, word.trim().toLowerCase()])
+              setWordList([...wordList, word.trim().toLowerCase()]);
               element.style.color = colors[no];
             }
             if (wordsFound > 3) {
@@ -52,7 +60,7 @@ export default function GameFooter({
             }
             setWordsFound(wrd => wrd + 1);
           }
-          setWord('')
+          setWord('');
         }}
         borderRadius="20px"
         height="60px"
