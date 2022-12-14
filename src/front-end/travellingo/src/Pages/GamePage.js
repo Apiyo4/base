@@ -53,7 +53,7 @@ export default function GamePage() {
     }
   },[gameLevel])
   useEffect(() => {
-    if (wordsFound === 3) {
+    if (wordsFound === 10) {
       const jsConfetti = new JSConfetti();
       jsConfetti.addConfetti();
       document.querySelector('#gameButton').disabled = true;
