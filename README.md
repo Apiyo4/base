@@ -25,7 +25,6 @@ Installation requirements
  - GET /questions/answered -> all users can see answered questions
  - POST /users -> all users can register
  - POST /users/login -> all users can login
- //authenticated routes
  - PUT /questions -> guru can answer a question
  - POST /tests -> guru can add tests
  - DELETE /questions -> guru can delete irrelevant questions
