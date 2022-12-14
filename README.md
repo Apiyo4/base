@@ -22,9 +22,10 @@ Installation requirements
 ### Endpoints: 
  - POST /questions -> all users can ask a question
  - GET /tests -> all users can take a test
- - GET /questions/answered -> ll ausers can see answered questions
+ - GET /questions/answered -> all users can see answered questions
  - POST /users -> all users can register
  - POST /users/login -> all users can login
+ //authenticated routes
  - PUT /questions -> guru can answer a question
  - POST /tests -> guru can add tests
  - DELETE /questions -> guru can delete irrelevant questions
