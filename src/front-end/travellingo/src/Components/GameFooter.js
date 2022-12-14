@@ -1,6 +1,6 @@
 import { Flex, Input, Button } from '@chakra-ui/react';
 import React, { useEffect } from 'react';
-import { ans, colors, gameObj } from '../Utils/utils';
+import {  colors} from '../Utils/utils';
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -14,12 +14,24 @@ export default function GameFooter({
   imageUrl,
   setWordList,
   wordList,
+  gameObj,
+  ans,
+  gameLevel
 }) {
   const handleInputChange = e => {
     let inputValue = e.target.value;
     setWord(inputValue);
   };
-  useEffect(() => {}, [wordsFound]);
+
+  useEffect(() => {
+    for(let i = 0; i < 80; i++){
+      const element = document.querySelector(
+        `.letter${0}`
+      );
+      element.style.color = 'black'
+    }
+
+  }, [gameLevel]);
   return (
     <Flex width="681px" margin={'2rem auto'} justifyContent={'center'}>
       <Input
